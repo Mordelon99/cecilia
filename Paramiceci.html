@@ -1,91 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link
-      rel="shortcut icon"
-      href="https://img.icons8.com/fluent/48/000000/like.png"
-      type="image/png"
-    />
-    <title>Happy Valentines Day</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Dancing+Script&amp;display=swap"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body onload="myFunction() ">
-   <script>
-      function myFunction() {
-        alert("Wishing you a very Happy Valentine Day Love  ❤️ After this Alert box goes, click on the screen - to get a secret surprise");
-      }
-      function play() {
-        var audio = document.getElementById("audio");
-        audio.play();
-      }
-      </script>
-      
-    <embed src="./assets/mp3/song.mp3" loop="true" autostart="true" width="2" height="0">
-    <img
-      src="https://i.imgur.com/dGOOfnA.png"
-      alt="image-top-right"
-      class="top-right-decoration"
-    />
-    <img
-      src="https://i.imgur.com/t6ffnbn.png"
-      alt="image-top-left"
-      class="top-left-decoration"
-    />
-    />
-    <img
-      src="https://mx.pinterest.com/monsetrinidadiz/bola-amarilla/
-    <div class="container" onClick="play()" style="cursor: pointer;">
-      <div class="row d-flex justify-content-center">
-         
-        <div class="col-md-7 col-xs-10 col-lg-7 col-sm-12 text-center">
-        
-         <br />
-          <div class="title">
-            <h1>Para ti mi cabeza de Hormiga </h1>
-            <h2>
-              Ni la conozco, pero ya me envolví
-              Le he likeao y comentao, toa las fotos del feed
-              Tiene un piquete bien puti y a la vez bien fancy
-              Quiero hacerla mía, me tengo confianza
-            </h2>
-            <h2>
-              Es una cherry bomb, shorty fucking young
-              Ese culo tuyo eleva mi imaginación
-              Manda tu ubicación, manda tu ubicación
-              Sal de la zona de confort, piérdete con este...
-             </h2>
-             <h2>
-              I tried so hard to pass it off as just another day in the
-              calendar. But I could not. The truth is that I miss you and I am
-              waiting for the day I’ll get to see you and tell you how much I
-              love you, in person! Until then, I guess I’ll just have to be
-              patient - which I will be.
-            </h2>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventanillo de Amor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .ventanillo {
+            display: none; /* Ocultar por defecto */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .contenido {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        .boton {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .boton:hover {
+            background-color: #d81b60;
+        }
+    </style>
+</head>
+<body>
 
-            <h2>
-              Si lees esto me debes un beso, si sigues leyendo me debes dos , venga sigues leyendo tocara
-              que me hagas el amor frente a la luna llena y aullemos como lobos
-            </h2>
-          </div>
-        </div>
-      </div>
+<h1>Bienvenido al Ventanillo de Amor</h1>
+<button class="boton" onclick="abrirVentanillo()">Abrir Ventanillo</button>
+
+<div id="ventanillo" class="ventanillo">
+    <div class="contenido">
+        <h2>¡Hola, amor!</h2>
+        <p>¿Quieres decirle algo especial a esa persona especial?</p>
+        <textarea placeholder="Escribe tu mensaje aquí..." rows="4" cols="30"></textarea><br>
+        <button class="boton" onclick="cerrarVentanillo()">Cerrar</button>
     </div>
-    <audio controls loop class="music" id="audio">
-      <source src="./assets/mp3/song.mp3" type="audio/mpeg">
-   </audio>
-    <p class="sender">
-      With Best Regards <br />
-      Smile Gupta
-    </p>
-  </body>
+</div>
+
+<script>
+    function abrirVentanillo() {
+        document.getElementById('ventanillo').style.display = 'flex';
+    }
+    function cerrarVentanillo() {
+        document.getElementById('ventanillo').style.display = 'none';
+    }
+</script>
+
+</body>
 </html>
