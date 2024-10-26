@@ -31,6 +31,8 @@
             padding: 20px;
             text-align: center;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 500px;
         }
         .boton {
             background-color: #e91e63;
@@ -44,6 +46,11 @@
         .boton:hover {
             background-color: #d81b60;
         }
+        iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -54,8 +61,12 @@
 <div id="ventanillo" class="ventanillo">
     <div class="contenido">
         <h2>¡Hola, amor!</h2>
-        <p>¿Quieres decirle algo especial a esa persona especial?</p>
+        <p>¿Quieres Echar Pasion con esta cancion?</p>
         <textarea placeholder="Escribe tu mensaje aquí..." rows="4" cols="30"></textarea><br>
+        
+        <!-- Incrustar música de YouTube -->
+        <iframe src="https://www.youtube.com/watch?v=kpnEJxXO9Oo" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        
         <button class="boton" onclick="cerrarVentanillo()">Cerrar</button>
     </div>
 </div>
